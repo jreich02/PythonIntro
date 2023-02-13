@@ -22,7 +22,7 @@ gamePong = pygame.Rect(rectX, rectY, pongWidth, pongHeight)
 rectColor = (255, 0, 0)
 rectSize = rectWidth, rectHeight = 100, 25
 rectPos = rectX, rectY = 200, 500
-rectSpeed = 2
+rectSpeed = 1
 
 gameRect = pygame.Rect(rectX, rectY, rectWidth, rectHeight)
 
