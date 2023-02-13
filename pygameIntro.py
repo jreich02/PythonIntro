@@ -38,14 +38,21 @@ def move_rect(gameRect):
     #elif keys[pygame.K_DOWN]:
         #gameRect.move_ip(0,rectSpeed)
 
+#move pong 
+def move_pong(gamePong):
+    gamePong.move_ip(0, rectSpeed)
+
 # Game loop
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()    
-
+    # Allow player to move
     move_rect(gameRect)
+    # Allow pong to move
+    move_pong(gamePong)
+    
 
     gameRect.clamp_ip(surface.get_rect())
     #draw stuff to screen
