@@ -14,7 +14,7 @@ screenColor = (200, 200, 200)
 pongColor = (255, 255, 255)
 pongSize = pongWidth, pongHeight = 25, 25
 pongPos = rectX, rectY = 100, 100
-pongSpeed = 2
+pongSpeed = 1
 
 gamePong = pygame.Rect(rectX, rectY, pongWidth, pongHeight)
 
@@ -22,7 +22,7 @@ gamePong = pygame.Rect(rectX, rectY, pongWidth, pongHeight)
 rectColor = (255, 0, 0)
 rectSize = rectWidth, rectHeight = 100, 25
 rectPos = rectX, rectY = 200, 500
-rectSpeed = 1
+rectSpeed = 2
 
 gameRect = pygame.Rect(rectX, rectY, rectWidth, rectHeight)
 
@@ -40,7 +40,7 @@ def move_rect(gameRect):
 
 #move pong 
 def move_pong(gamePong):
-    gamePong.move_ip(0, rectSpeed)
+    gamePong.move_ip(0, pongSpeed)
 
 # Game loop
 while True:
