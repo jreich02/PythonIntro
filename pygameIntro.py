@@ -52,25 +52,17 @@ gameFloor = pygame.Rect(floorX, floorY, floorWidth, floorHeight)
 rectColor = (255, 0, 0)
 rectSize = rectWidth, rectHeight = 100, 10
 rectPos = rectX, rectY = 300, 650
-rectSpeed = 1
+rectSpeed = 0.5
 
 gameRect = pygame.Rect(rectX, rectY, rectWidth, rectHeight)
 
 # Controller - keyboard Input
 def move_rect(gameRect):
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_LEFT] and gameRect.x > 0:
-        gameRect.move_ip(-rectSpeed,0)
-    elif keys[pygame.K_RIGHT] and gameRect.x < (SCREEN_WIDTH - rectWidth):
-        gameRect.move_ip(rectSpeed,0)
-    #elif keys[pygame.K_UP]:
-        #gameRect.move_ip(0,-rectSpeed)
-    #elif keys[pygame.K_DOWN]:
-        #gameRect.move_ip(0,rectSpeed)
+    gameRect.update(rectX, rectY, rectWidth, rectHeight)
 
 #move pong 
 def move_pong(gamePong, pongX, pongY):
-      gamePong.update(pongX, pongY, pongWidth, pongHeight)
+    gamePong.update(pongX, pongY, pongWidth, pongHeight)
     
 
 # Game loop
@@ -79,7 +71,13 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()    
+
     # Allow player to move
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_LEFT] and gameRect.x > 0:
+        rectX -= rectSpeed
+    elif keys[pygame.K_RIGHT] and gameRect.x < (SCREEN_WIDTH - rectWidth):
+        rectX += rectSpeed
     move_rect(gameRect)
     
     # Allow pong to move
