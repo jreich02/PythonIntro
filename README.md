@@ -2,7 +2,27 @@
 PROJECT 1 - CPSC 4160/6160 - Game Engine Construction <br />
 Developed by: James Reich and Joseph Suter <br />
 
-Game: Pong <br />
+Game: Racket-Ball Pong <br />
 
-HOW TO INSTALL/RUN: - to be updated <br />
-HOW TO PLAY: - to be updated 
+Game Image: 
+
+Version(s): Pygame python <br />
+- System requirements: <br />
+- Have python and pygame installed
+
+TODO: How to Install and Run:  <br />
+
+Rules / How to Play : <br />
+1.) Use arrow keys to move the player paddle (left or right)
+2.) Don't let the pong hit the ground (costs 1 life when you run out of lives the game ends)
+
+
+
+
+Motivation and Reasoning: We wanted to create a game anyone could play to pass the time and have some quick casual fun. Settling to cerate a game based on the high-score / self-competitive modules. We created a hybrid combination of pong and racket ball.<br />
+
+ TODO: Image: of classes and functions and connections: Include a diagram or image that shows the relationships between the classes, functions, and variables in your game <br />
+
+ TODO: Future Work:  <br />
+TODO: Generalization: <br />
+
