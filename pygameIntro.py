@@ -57,7 +57,9 @@ while True:
         pongYspeed = math.sqrt(pongSpeed**2 - pongXspeed**2)
         #self.speed_change()
         pongYspeed *= -1
-        playerScore += 1
+        if(playerLives > 0):
+            if(pongY < rectY):
+                playerScore += 1
        
     # Collision - if pong collides with display ceiling
     collideCeiling = pygame.Rect.colliderect(gameCeiling, gamePong)

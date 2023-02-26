@@ -15,9 +15,7 @@ rectSpeed = 0.5
 gameRect = pygame.Rect(rectX, rectY, rectWidth, rectHeight)
 
 # Get player's old highscore (if it exists
-try:
-    f = open('score.txt','rt')
-except IOError as e:
-    print('error')
+
+
     
 
