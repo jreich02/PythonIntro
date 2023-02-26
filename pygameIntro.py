@@ -1,6 +1,7 @@
 import pygame, sys
 import random
 import math
+import shelve
 # Size of our window
 SCREEN_SIZE = SCREEN_WIDTH, SCREEN_HEIGHT = 700, 700
 
@@ -104,16 +105,20 @@ while True:
     # Collision - if pong collides with player rect
     collidePlayer = pygame.Rect.colliderect(gameRect, gamePong)
     if collidePlayer:
-        randspeed = random.uniform(0.2, 1) * pongSpeed
+        if playerScore % 10 == 0:
+            pongSpeed = pongSpeed + (playerScore // 10) * 0.1
+            rectSpeed = rectSpeed + (playerScore // 10) * 0.1
+
+        randspeed = random.uniform(pongSpeed/5, pongSpeed) * 0.95
         if pongXspeed >= 0:
             pongXspeed = randspeed
         if pongXspeed < 0:
-            pongXspeed = randspeed
+            pongXspeed = -randspeed
         pongYspeed = math.sqrt(pongSpeed**2 - pongXspeed**2)
         #self.speed_change()
         pongYspeed *= -1
         playerScore += 1
-        
+       
     # Collision - if pong collides with display ceiling
     collideCeiling = pygame.Rect.colliderect(gameCeiling, gamePong)
     if collideCeiling:
@@ -130,13 +135,17 @@ while True:
     # Collision - if pong collides with floor
     collideFloor = pygame.Rect.colliderect(gameFloor, gamePong)
     if collideFloor:
-        if (playerLives != 0):
+        if(playerLives != 0):
             pongYspeed *= -1
             playerLives = playerLives - 1
-        else:
-            pongYspeed*= 0 
-            pongXspeed*= 0
     
+    # Player Score
+    #if collidePlayer:
+        #while(playerLives != 0):
+            #playerScore = playerScore + 1
+        #if (playerLives == 0):
+            #playerScore = playerScore
+            
     # Game Display and Draw
     # restrict - rect to display
     gameRect.clamp_ip(surface.get_rect())
