@@ -1,5 +1,5 @@
 # PythonIntro - Project 1 Simple Game Creation
-PROJECT 1 - CPSC 4160/6160 - Game Engine Construction <br />
+PROJECT 1: Racket Ball Pong - CPSC 4160/6160 (Game Engine Construction) <br />
 Developed by: James Reich and Joseph Suter <br />
 
 Game: Racket-Ball Pong <br />
