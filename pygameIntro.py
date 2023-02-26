@@ -1,66 +1,17 @@
+
 import pygame, sys
 import random
 import math
-# import from files
-from player import *
-from text import *
-# Size of our window
-SCREEN_SIZE = SCREEN_WIDTH, SCREEN_HEIGHT = 700, 700
 
 # Initialize game
 pygame.init()
 
-# window name
-pygame.display.set_caption("Pong-Game")
-surface = pygame.display.set_mode(SCREEN_SIZE)
+# import from files
+from player import *
+from pong import *
+from borders import *
+from text import *
 
-# Color of my window
-screenColor = (200, 200, 200)
-
-
-
-# player - rectangle vars
-rectColor = (255, 0, 0)
-rectSize = rectWidth, rectHeight = 100, 10
-rectPos = rectX, rectY = 300, 650
-rectSpeed = 0.5
-
-gameRect = pygame.Rect(rectX, rectY, rectWidth, rectHeight)
-
-# pong - rectangle vars
-pongColor = (255, 255, 255)
-pongSize = pongWidth, pongHeight = 25, 25
-pongPos = pongX, pongY = 100, 100
-pongXspeed, pongYspeed = 0.2, 0.5
-pongSpeed = 0.8
-
-gamePong = pygame.Rect(pongX, pongY, pongWidth, pongHeight)
-
-
-# Border Objects
-# ceiling object - rectangle vars
-ceilingColor = (0, 0, 255)
-ceilingSize = ceilingWidth, ceilingHeight = SCREEN_WIDTH, 25
-ceilingPos = ceilingX, ceilingY =  0, 0
-gameCeiling = pygame.Rect(ceilingX, ceilingY, ceilingWidth, ceilingHeight)
-
-# left side - rectangle vars
-leftSideColor = (0, 0, 255)
-leftSideSize = leftSideWidth, leftSideHeight = 25, SCREEN_HEIGHT
-leftSidePosition = leftSideX, leftSideY =  0, 25
-leftSide = pygame.Rect(leftSideX, leftSideY, leftSideWidth, leftSideHeight)
-
-#right side - rect vars
-rightSideColor = (0, 0, 255)
-rightSideSize = rightSideWidth, rightSideHeight = 25, SCREEN_HEIGHT
-rightSidePosition = rightSideX, rightSideY = 675, 0
-rightSide = pygame.Rect(rightSideX, rightSideY, rightSideWidth, rightSideHeight)
-
-#floor
-floorColor = (0, 0, 255)
-floorSize = floorWidth, floorHeight = SCREEN_WIDTH, 25
-floorPosition = floorX, floorY = 0, 675
-gameFloor = pygame.Rect(floorX, floorY, floorWidth, floorHeight)
 
 # Controller - keyboard Input
 def move_rect(gameRect):
@@ -69,9 +20,6 @@ def move_rect(gameRect):
 #move pong 
 def move_pong(gamePong, pongX, pongY):
     gamePong.update(pongX, pongY, pongWidth, pongHeight)
-    
-
-
 # Game loop
 while True:
     for event in pygame.event.get():
@@ -97,7 +45,10 @@ while True:
     # Collision - if pong collides with player rect
     collidePlayer = pygame.Rect.colliderect(gameRect, gamePong)
     if collidePlayer:
-        pongSpeed = pongSpeed + playerScore * 0.2
+        if playerScore % 10 == 0:
+            pongSpeed = pongSpeed + (playerScore // 10) * 0.1
+            rectSpeed = rectSpeed + (playerScore // 10) * 0.1
+
         randspeed = random.uniform(pongSpeed/5, pongSpeed) * 0.95
         if pongXspeed >= 0:
             pongXspeed = randspeed
@@ -106,6 +57,7 @@ while True:
         pongYspeed = math.sqrt(pongSpeed**2 - pongXspeed**2)
         #self.speed_change()
         pongYspeed *= -1
+        playerScore += 1
        
     # Collision - if pong collides with display ceiling
     collideCeiling = pygame.Rect.colliderect(gameCeiling, gamePong)
@@ -140,7 +92,6 @@ while True:
     # draw - text
     text = font.render('Lives: ' + str(playerLives) + ' Score: ' + str(playerScore), True, textColor, textBackgroundColor)
     surface.blit(text, gameText)
-    
     
     # draw - player
     pygame.draw.rect(surface, rectColor, gameRect)
