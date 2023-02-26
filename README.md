@@ -13,7 +13,7 @@ Version(s): Pygame python <br />
 TODO: How to Install and Run:  <br />
 
 Rules / How to Play : <br />
-1.) Use arrow keys to move the player paddle (left or right) <br />
+1.) Use the (left, right) arrow keys to move the player paddle <br />
 2.) Don't let the pong hit the ground! <br />
 3.) Try to get the highest score possible. <br />
 
