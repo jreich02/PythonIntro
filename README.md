@@ -16,9 +16,9 @@ Version(s): Pygame python <br />
 - Have python3 and pygame installed
 
 How to Install and Run: <br />
-1.) Download the files in the github
-2.) Open Terminal and navigate to where you've saved the files
-3.) Use Terminal command: python3 pygameIntro.py
+1.) Download the files in the github <br />
+2.) Open Terminal and navigate to where you've saved the files <br />
+3.) Use Terminal command: python3 pygameIntro.py <br />
 
 
 Rules / How to Play : <br />
@@ -28,13 +28,19 @@ Rules / How to Play : <br />
 
 
 
-Motivation and Reasoning: We wanted to create a game anyone could play to pass the time and have some quick casual fun. Settling to cerate a game based on the high-score / self-competitive modules. We created a hybrid combination of pong and racket ball.<br />
+Motivation: We wanted to create a game anyone could play to pass the time and have some quick casual fun. Settling to cerate a game based on the high-score / self-competitive modules. We created a hybrid combination of pong and racket ball. <br />
+
+Reasoning: <br />
 
  Game Scheme Image: <br />
  
  ![GameImage drawio](https://user-images.githubusercontent.com/112408320/221486873-fa5a41ee-6658-40f4-8583-b28aeb628eff.png)
  <br />
 
- TODO: Future Work:  <br />
-TODO: Generalization: <br />
+Future Work: To improve the game we could add: <br />
+- A start menu
+- Different game modes (i.e. break-out)
+-  <br />
+
+Generalization: <br />
 
