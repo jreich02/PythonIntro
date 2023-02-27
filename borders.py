@@ -11,7 +11,7 @@ surface = pygame.display.set_mode(SCREEN_SIZE)
 # Color of my window
 screenColor = (200, 200, 200)
 
-# Border Objects
+# Border Objects - Functiononal 
 # ceiling object - rectangle vars
 ceilingColor = (0, 0, 255)
 ceilingSize = ceilingWidth, ceilingHeight = SCREEN_WIDTH, 25
@@ -35,3 +35,14 @@ floorColor = (0, 0, 255)
 floorSize = floorWidth, floorHeight = SCREEN_WIDTH, 25
 floorPosition = floorX, floorY = 0, 675
 gameFloor = pygame.Rect(floorX, floorY, floorWidth, floorHeight)
+
+# Court lines - decorational
+courtLineColor = (50, 0, 50)
+courtLineSize = courtWidth, courtHeight = SCREEN_WIDTH, 10
+# court line 1
+courtLineOnePosition = courtLine1X, courtLine1Y = 0, 300
+# court line 2
+courtLineTwoPosition = courtLine2X, courtLine2Y = 0, 400
+
+courtLineOne = pygame.Rect(courtLine1X, courtLine1Y, courtWidth, courtHeight)
+courtLineTwo = pygame.Rect(courtLine2X, courtLine2Y, courtWidth, courtHeight)

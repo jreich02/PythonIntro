@@ -8,7 +8,9 @@ textColor = (255, 0, 0)
 # font
 font = pygame.font.Font('Fragmentcore.otf', 25)
 
-# text background
+
+# active game text
 textRectSize = textWidth, textHeight = 200, 200
-textRectPos = textRectX, textRectY = 32,32
+textRectPos = textRectX, textRectY = 200,32
 gameText = pygame.Rect(textRectX, textRectY, textWidth, textHeight)
+

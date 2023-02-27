@@ -46,7 +46,6 @@ while True:
     
         
     # Collision Detection
-    
     # Collision - if pong collides with player rect
     collidePlayer = pygame.Rect.colliderect(gameRect, gamePong)
     if collidePlayer and pongY < rectY:
@@ -105,10 +104,14 @@ while True:
     surface.fill(screenColor)
     
     # draw - text
-    text = font.render('Lives: ' + str(playerLives) + ' Score: ' + str(playerScore) + ' High Score: ' + str(playerHighScore), True, textColor, textBackgroundColor)
+    text = font.render('Lives: ' + str(playerLives) + '  Score: ' + str(playerScore) + '  High Score: ' + str(playerHighScore), True, textColor, textBackgroundColor)
     if(playerHighScore < playerScore):
         playerHighScore = playerScore
     surface.blit(text, gameText)
+    
+    # draw - court  lines (decor) 
+    pygame.draw.rect(surface, courtLineColor, courtLineOne)
+    pygame.draw.rect(surface, courtLineColor, courtLineTwo)
     
     # draw - player
     pygame.draw.rect(surface, rectColor, gameRect)
@@ -136,5 +139,5 @@ while True:
     if(playerLives == 0):
         f = open('score.txt', 'w')
         f.write(str(playerHighScore))
-        f.close()    
+        f.close()
         pygame.display.close()
