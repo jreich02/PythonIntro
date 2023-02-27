@@ -13,9 +13,13 @@ Game Image: <br />
 
 Version(s): Pygame python <br />
 - System requirements: <br />
-- Have python and pygame installed
+- Have python3 and pygame installed
 
-TODO: How to Install and Run:  <br />
+How to Install and Run: <br />
+1.) Download the files in the github
+2.) Open Terminal and navigate to where you've saved the files
+3.) Use Terminal command: python3 pygameIntro.py
+
 
 Rules / How to Play : <br />
 1.) Use the (left, right) arrow keys to move the player paddle <br />
