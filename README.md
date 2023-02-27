@@ -4,10 +4,12 @@ Developed by: James Reich and Joseph Suter <br />
 
 Game: Racket-Ball Pong <br />
 -------------------------------------
-Version: Pygame python <br />
+Version: <br/ >
+Pygame python 
+<br />
 ------------------------------------
 How to Install and Run: <br />
-!! Please have python 3 and pygame pre-installed !!
+!! Please have python 3 and pygame pre-installed !! <br />
 1.) Download the files in the github <br />
 2.) Open Terminal and navigate to where you've saved the files <br />
 3.) Use Terminal command: python3 pygameIntro.py <br />
