@@ -42,7 +42,8 @@ We chose to implement a feature that causes the game pong to bounce in a random 
  ![GameImage drawio](https://user-images.githubusercontent.com/112408320/221486873-fa5a41ee-6658-40f4-8583-b28aeb628eff.png) <br />
  
 ------------------------------------
-Future Work: To improve the game we could add the following elements: <br />
+Future Work: <br />
+To improve the game we could add the following elements: <br />
 * A start menu
 * Pause menu
 * Different game modes (i.e. break-out)
