@@ -23,8 +23,10 @@ f = open('score.txt')
 for line in f.readlines():
     scores.append(int(line))
 f.close()
-highest = scores[0]
 
+highest = scores[0]
+# iterate through score.txt to get highest score saved
 for t in scores:
     if t > highest:
-        playerHighScore = t
+        highest = t
+playerHighScore = highest

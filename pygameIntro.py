@@ -106,6 +106,8 @@ while True:
     
     # draw - text
     text = font.render('Lives: ' + str(playerLives) + ' Score: ' + str(playerScore) + ' High Score: ' + str(playerHighScore), True, textColor, textBackgroundColor)
+    if(playerHighScore < playerScore):
+        playerHighScore = playerScore
     surface.blit(text, gameText)
     
     # draw - player
@@ -132,4 +134,7 @@ while True:
     pygame.display.update()
     #close game once player is out of lives
     if(playerLives == 0):
+        f = open('score.txt', 'w')
+        f.write(str(playerHighScore))
+        f.close()    
         pygame.display.close()
