@@ -4,7 +4,7 @@ Developed by: James Reich and Joseph Suter <br />
 
 Game: Racket-Ball Pong <br />
 
-Game Image:![GameImage drawio](https://user-images.githubusercontent.com/112408320/221486717-18d56854-b400-475e-8068-e7a51f61ac0a.png)
+Game Image:(https://user-images.githubusercontent.com/112408320/221486717-18d56854-b400-475e-8068-e7a51f61ac0a.png)
 
 
 
