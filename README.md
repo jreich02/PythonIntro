@@ -30,7 +30,7 @@ Game Image: <br />
 -------------------------------------
 
 Motivation: 
-We wanted to create a game anyone could play to pass the time and have some quick casual fun. Settling to cerate a game based on the high-score / self-competitive modules. We created a hybrid combination of pong and racket ball. <br />
+We wanted to create a game anyone could play to pass the time and have some quick casual fun. Settling to create a game based on the high-score / self-competitive modules. We created a hybrid combination of pong and racket ball. <br />
 
 -------------------------------------
 Reasoning: 
