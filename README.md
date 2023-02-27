@@ -6,7 +6,8 @@ Game: Racket-Ball Pong <br />
 
 Game Image: <br />
 
-![GameImage drawio](https://user-images.githubusercontent.com/112408320/221486873-fa5a41ee-6658-40f4-8583-b28aeb628eff.png)
+![Screenshot 2023-02-27 at 1 49 27 AM](https://user-images.githubusercontent.com/112408320/221494261-dd155a67-c0c7-4530-8f2a-d07277a2583c.png)
+
 <br />
 
 
@@ -25,7 +26,8 @@ Rules / How to Play : <br />
 
 Motivation and Reasoning: We wanted to create a game anyone could play to pass the time and have some quick casual fun. Settling to cerate a game based on the high-score / self-competitive modules. We created a hybrid combination of pong and racket ball.<br />
 
- TODO: Image: of classes and functions and connections: Include a diagram or image that shows the relationships between the classes, functions, and variables in your game <br />
+ Game Scheme Image: ![GameImage drawio](https://user-images.githubusercontent.com/112408320/221486873-fa5a41ee-6658-40f4-8583-b28aeb628eff.png)
+ <br />
 
  TODO: Future Work:  <br />
 TODO: Generalization: <br />
